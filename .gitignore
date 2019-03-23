@@ -1,0 +1,14 @@
+# editor
+.idea/
+
+# npm modules
+node_modules/
+
+# package-lock
+package-lock.json
+
+# distribution folder
+dist/
+
+# debugs
+debug.log
