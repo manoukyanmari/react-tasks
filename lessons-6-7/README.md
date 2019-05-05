@@ -1,4 +1,4 @@
-## Getflix
+## Netflix
 
 A side-project study in Netflix's desktop UI built with React, Redux and RxJS via Redux-Observable. Work in progress.
 
