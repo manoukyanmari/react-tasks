@@ -1,0 +1,36 @@
+// GLOBAL STYLES
+body {
+	background-color: $background-gray;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: transparent;
+}
+
+h1, h2, h3 {
+	font-family: $global-font-header;
+}
+
+h1 {
+	font-size: 2.25em;
+	font-weight: 400;
+	letter-spacing: .05em;
+}
+h2, h3 {
+	font-size: $card-font-sub;
+	letter-spacing: .025em;
+}
+
+p, span, label {
+	font-family: $global-font-body;
+	font-size: 16px;
+}
+
+a {
+	color: lighten($global-color-gray, 30%);
+	text-decoration: none;
+	&:hover {
+		color: $link-color-turqoise;
+	}
+	&:visited, &:active, &:focus { text-decoration: none; }
+}

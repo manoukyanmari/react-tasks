@@ -1,0 +1,17 @@
+// COMPONENT LAYOUT STYLES
+.app {
+	display: flex;
+	flex-direction: column;
+}
+
+.title-card, .row, .footer, .navigation {
+	flex-direction: row;
+}
+
+.search-overlay {
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+	background-color: $background-gray;
+	color: lighten($global-color-gray, 30%);
+}

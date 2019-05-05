@@ -1,0 +1,326 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+	 v2.0 | 20110126
+	 License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  background-color: #141414; }
+
+*::-webkit-scrollbar-thumb {
+  background-color: transparent; }
+
+h1, h2, h3 {
+  font-family: "Roboto Slab", serif; }
+
+h1 {
+  font-size: 2.25em;
+  font-weight: 400;
+  letter-spacing: .05em; }
+
+h2, h3 {
+  font-size: 1.25em;
+  letter-spacing: .025em; }
+
+p, span, label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px; }
+
+a {
+  color: #787878;
+  text-decoration: none; }
+  a:hover {
+    color: #337AB7; }
+  a:visited, a:active, a:focus {
+    text-decoration: none; }
+
+.app {
+  display: flex;
+  flex-direction: column; }
+
+.title-card, .row, .footer, .navigation {
+  flex-direction: row; }
+
+.search-overlay {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background-color: #141414;
+  color: #787878; }
+
+.navigation {
+  font-family: "Open Sans", sans-serif;
+  height: 70px;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  background: linear-gradient(to bottom, black 0%, transparent 100%);
+  border: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100; }
+  .navigation .container {
+    vertical-align: middle;
+    height: 70px;
+    margin: 0 60px;
+    padding: 0; }
+    .navigation .container > section, .navigation .container ul {
+      line-height: 60px;
+      display: inline-block;
+      vertical-align: center;
+      text-decoration: none;
+      margin-right: 1.5em; }
+    .navigation .container .navbar-header {
+      height: 70px;
+      letter-spacing: .3em;
+      font-weight: bolder;
+      font-size: 22px; }
+      .navigation .container .navbar-header a {
+        color: #337AB7; }
+
+.title-card {
+  display: inline-flex;
+  flex-direction: row;
+  height: 80vh;
+  padding: 10em 13em 2em 13em;
+  color: white;
+  line-height: 2em; }
+  .title-card .card-img {
+    box-shadow: 0 0 7px #0F0F0F;
+    margin-right: 2.75em;
+    width: 300px;
+    height: 450px; }
+  .title-card .card-body {
+    flex: 2 0 0;
+    color: white;
+    line-height: 1.25em; }
+    .title-card .card-body .title-card-header {
+      display: inline-flex;
+      line-height: 1.3em;
+      margin: .25em .5em 1em 0;
+      vertical-align: middle; }
+
+section[class^="row-"] {
+  padding: .25em 0 .25em 60px;
+  margin-bottom: .25em;
+  background-color: #141414;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: .2em;
+  position: relative; }
+  section[class^="row-"] .row-title {
+    display: flex;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    color: #787878;
+    margin-bottom: .25em; }
+    section[class^="row-"] .row-title:hover {
+      cursor: pointer;
+      color: #337AB7; }
+  section[class^="row-"] .row-items-wrapper {
+    padding: 0; }
+    section[class^="row-"] .row-items-wrapper .row-body {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      height: 350px;
+      overflow-y: hidden;
+      overflow-x: scroll;
+      padding: 0; }
+    section[class^="row-"] .row-items-wrapper .row-ticker {
+      display: flex;
+      -webkit-transition: background 1s ease;
+      -moz-transition: background 1s ease;
+      -ms-transition: background 1s ease;
+      -o-transition: background 1s ease;
+      transition: background 1s ease;
+      background: linear-gradient(to right, transparent, rgba(20, 20, 20, 0.6));
+      width: 10%;
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      cursor: pointer; }
+      section[class^="row-"] .row-items-wrapper .row-ticker:hover {
+        background: linear-gradient(to right, transparent, rgba(20, 20, 20, 0.8)); }
+
+.card-dropdown {
+  display: flex;
+  -webkit-transition: max-height 2s ease;
+  -moz-transition: max-height 2s ease;
+  -ms-transition: max-height 2s ease;
+  -o-transition: max-height 2s ease;
+  transition: max-height 2s ease;
+  max-height: 0;
+  background: #141414;
+  padding-top: 2em; }
+  .card-dropdown .card-body {
+    display: inline-flex;
+    color: white; }
+
+.card-content {
+  margin: 0 1.5em; }
+  .card-content .card-metadata {
+    display: flex;
+    letter-spacing: .05em;
+    margin: 1em 0; }
+  .card-content .card-overview {
+    line-height: 1.5em;
+    letter-spacing: .05em;
+    font-weight: lighter; }
+
+.card-header {
+  display: inline-flex;
+  flex-wrap: wrap;
+  vertical-align: middle;
+  font-size: 1.4em;
+  margin: 0 1em .5em 0; }
+
+.search-overlay {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  margin: 12em;
+  height: 50vh; }
+  .search-overlay .search-input {
+    height: 60px;
+    width: 70vw;
+    font-size: 3.25em;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: .05em;
+    background-color: transparent;
+    border: 0;
+    color: #337AB7; }
+    .search-overlay .search-input:focus {
+      outline: none; }
+  .search-overlay .search-subtitle {
+    color: #FFF;
+    font-size: 1em;
+    letter-spacing: .1em; }
+
+.footer {
+  height: 200px;
+  width: 100%;
+  padding: 1em 0;
+  background-color: #141414; }
+  .footer .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 980px;
+    margin: 20px auto 0; }
+    .footer .footer-container .footer-section {
+      flex-basis: 30%;
+      flex-grow: 1;
+      text-align: left; }
+      .footer .footer-container .footer-section > .footer-label {
+        margin: 1em 0; }
+      .footer .footer-container .footer-section:first-child {
+        flex: 0 1 100%;
+        margin-bottom: 1.5em; }
+
+.item-video {
+  height: 405px;
+  width: 720px;
+  flex: 0 0 auto; }
+
+.main-spinner, .card-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  width: 200px;
+  transition: opacity 1s ease-out; }
+  .main-spinner > div, .card-spinner > div {
+    margin: .1em;
+    background-color: white;
+    opacity: 0.7; }
+
+.card-spinner {
+  position: relative;
+  height: 70px; }
+
+.item-review {
+  display: inline-flex !important;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  vertical-align: middle;
+  letter-spacing: .15em;
+  margin-bottom: 1em; }
+  .item-review label {
+    font-size: 20px; }
+
+.label-strip {
+  display: flex;
+  max-height: 150px; }
+  .label-strip label[class^="label-"] {
+    display: inline-flex;
+    border-radius: 15px;
+    margin-right: .5em;
+    font-size: .75em;
+    padding: .3em .6em;
+    background-color: #337AB7; }
+    .label-strip label[class^="label-"]:hover {
+      background-color: #4f93ce;
+      cursor: pointer; }
+
+i.fa {
+  font-size: 2em;
+  margin-right: .8em;
+  color: #787878;
+  transition: .5s ease; }
+  i.fa:hover {
+    cursor: pointer;
+    color: #337AB7; }
+
+.navigation-is-scrolled {
+  background-color: rgba(0, 0, 0, 0.6); }
+
+.card-dropdown {
+  width: 95vw; }
+
+.card-dropdown-is-active {
+  max-height: 420px; }
+
+.item-video-is-active {
+  display: inline-flex; }
+
+.spinner-is-faded {
+  opacity: 0; }

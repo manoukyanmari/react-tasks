@@ -1,0 +1,45 @@
+section[class^="row-"] {
+	padding: .25em 0 .25em 60px;
+	margin-bottom: .25em;
+	background-color: $background-gray;
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: .2em;
+	position: relative;
+	.row-title {
+		@include flexbox(flex);
+		@include transition(.5s);
+		color: lighten($global-color-gray, 30%);
+		margin-bottom: .25em;
+		&:hover {
+			cursor: pointer;
+			color: $link-color-turqoise;
+		}
+	}
+	.row-items-wrapper {
+		padding: 0;
+		.row-body {
+			@include flexbox(flex, $wrap: nowrap);
+			align-items: center;
+			height: 350px;
+			overflow-y: hidden;
+			overflow-x: scroll;
+			padding: 0;
+		}
+		.row-ticker {
+			@include flexbox(flex);
+			@include transition(background 1s ease);
+			background: linear-gradient(to right, transparent, rgba(20,20,20,.6));
+			width: 10%;
+			height: 100%;
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			cursor: pointer;
+			&:hover {
+				background: linear-gradient(to right, transparent, rgba(20,20,20,.8));
+			}
+		}
+	}
+}

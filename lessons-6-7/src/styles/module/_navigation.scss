@@ -1,0 +1,35 @@
+.navigation {
+	font-family: $global-font-body;
+	height: 70px;
+	width: 100%;
+	margin: 0;
+	border-radius: 0;
+	background: linear-gradient(to bottom,	rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+	border: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+	.container {
+		vertical-align: middle;
+		height: 70px;
+		margin: 0 60px;
+		padding: 0;
+		& > section, ul {
+			line-height: 60px;
+			display: inline-block;
+			vertical-align: center;
+			text-decoration: none;
+			margin-right: 1.5em;
+		}
+		.navbar-header {
+			height: 70px;
+			letter-spacing: .3em;
+			font-weight: bolder;
+			font-size: 22px;
+			a {
+				color: $link-color-turqoise;
+			}
+		}
+	}
+}

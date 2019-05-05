@@ -1,0 +1,32 @@
+.card-dropdown {
+	@include flexbox(flex);
+	@include transition(max-height 2s ease);
+	max-height: 0;
+	background: $background-gray;
+	padding-top: 2em;
+	.card-body {
+		@include flexbox(inline-flex);
+		color: white;
+	}
+}
+
+.card-content {
+	margin: 0 1.5em;
+	.card-metadata {
+		@include flexbox(flex);
+		letter-spacing: .05em;
+		margin: 1em 0;
+	}
+	.card-overview {
+		line-height: 1.5em;
+		letter-spacing: .05em;
+		font-weight: lighter;
+	}
+}
+
+.card-header {
+	@include flexbox(inline-flex, $wrap: wrap);
+	vertical-align: middle;
+	font-size: $card-font-header;
+	margin: 0 1em .5em 0;
+}

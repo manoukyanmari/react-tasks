@@ -1,0 +1,24 @@
+.title-card {
+	@include flexbox(inline-flex, $direction: row);
+	height: 80vh;
+	padding: 10em 13em 2em 13em;
+	color: white;
+	line-height: 2em;
+	.card-img {
+		box-shadow: 0 0 7px $global-color-black;
+		margin-right: 2.75em;
+		width: 300px;
+		height: 450px;
+	}
+	.card-body {
+		@include flexbox($flex: 2 0 0);
+		color: white;
+		line-height: 1.25em;
+		.title-card-header {
+			@include flexbox(inline-flex);
+			line-height: 1.3em;
+			margin: .25em .5em 1em 0;
+			vertical-align: middle;
+		}
+	}
+}

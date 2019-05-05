@@ -1,0 +1,29 @@
+@mixin font-source($font: header, $size: null, $color: null, $weight: null, $spacing: null) {
+	@if $font == header {
+		font-family: $global-font-header;
+	} @else if $font == body {
+		font-family: $global-font-body;
+	}
+	@if $size { font-size: $size; }
+	@if $color { color: $color; }
+	@if $weight { font-weight: $weight; }
+	@if $spacing { letter-spacing: $spacing; }
+}
+
+@mixin flexbox($display: null, $direction: null, $basis: null, $flex: null, $grow: null, $wrap: null, $jc: null) {
+	@if $display { display: $display; }
+	@if $direction { flex-direction: $direction; }
+	@if $basis { flex-basis: $basis; }
+	@if $flex { flex: $flex; }
+	@if $grow { flex-grow: $grow; }
+	@if $wrap { flex-wrap: $wrap; }
+	@if $jc { justify-content: $jc; }
+}
+
+@mixin transition($duration) {
+	-webkit-transition: $duration;
+	-moz-transition: $duration;
+	-ms-transition: $duration;
+	-o-transition: $duration;
+	transition: $duration;
+}

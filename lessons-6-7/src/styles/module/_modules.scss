@@ -1,0 +1,63 @@
+.item-video {
+	height: 405px;
+	width: 720px;
+	flex: 0 0 auto;
+}
+
+.main-spinner {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	height: 100px;
+	width: 200px;
+	transition: opacity 1s ease-out;
+	> div {
+		margin: .1em;
+		background-color: white;
+		opacity: 0.7;
+	}
+}
+
+.card-spinner {
+	@extend .main-spinner;
+	position: relative;
+	height: 70px;
+}
+
+.item-review {
+	@include flexbox(inline-flex !important, $direction: row-reverse, $wrap: wrap);
+	vertical-align: middle;
+	letter-spacing: .15em;
+	margin-bottom: 1em;
+	label {
+		font-size: 20px;
+	}
+}
+
+.label-strip {
+	display: flex;
+	max-height: 150px;
+	label[class^="label-"] {
+		display: inline-flex;
+		border-radius: 15px;
+		margin-right: .5em;
+		font-size: .75em;
+		padding: .3em .6em;
+		background-color: $link-color-turqoise;
+		&:hover {
+			background-color: lighten($link-color-turqoise, 10%);
+			cursor: pointer;
+		}
+	}
+}
+
+i.fa { // Font Awesome Icons
+	font-size: 2em;
+	margin-right: .8em;
+	color: lighten($global-color-gray, 30%);
+	transition: .5s ease;
+	&:hover {
+		cursor: pointer;
+		color: $link-color-turqoise;
+	}
+}
